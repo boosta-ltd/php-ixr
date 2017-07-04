@@ -26,12 +26,12 @@ This package is published to [Packagist](https://packagist.org/), but if you don
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/kissifrot/php-ixr"
+            "url": "https://github.com/boosta-ltd/php-ixr"
         }
     ],
 
     "require": {
-        "kissifrot/php-ixr": "1.8.*"
+        "boosta-ltd/php-ixr": "1.8.*"
     }
 
 To your composer.json file
