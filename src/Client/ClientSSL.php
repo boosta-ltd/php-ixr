@@ -153,6 +153,10 @@ class ClientSSL extends Client
             curl_setopt($curl, CURLOPT_VERBOSE, 1);
         }
 
+        if($this->proxy) {
+            curl_setopt($ch, CURLOPT_PROXY, $this->proxy);
+        }
+        
         curl_setopt($curl, CURLOPT_HEADER, 1);
         curl_setopt($curl, CURLOPT_POST, 1);
         curl_setopt($curl, CURLOPT_POSTFIELDS, $xml);
