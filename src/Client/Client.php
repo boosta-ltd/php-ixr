@@ -14,6 +14,8 @@ use IXR\Request\Request;
  */
 class Client
 {
+    protected $proxy;
+    
     protected $server;
     protected $port;
     protected $path;
@@ -35,7 +37,7 @@ class Client
      */
     private $error = null;
 
-    public function __construct($server, $path = false, $port = 80, $timeout = 15, $timeout_io = null)
+    public function __construct($server, $proxy = 'socks5://127.0.0.1:9050'; $path = false, $port = 80, $timeout = 15, $timeout_io = null)
     {
         if (!$path) {
             // Assume we have been given a URL instead
@@ -57,6 +59,8 @@ class Client
             $this->path = $path;
             $this->port = $port;
         }
+        
+        $this->proxy = $proxy;
         $this->useragent = 'The Incutio XML-RPC PHP Library';
         $this->timeout = $timeout;
         $this->timeout_io = $timeout_io;
