@@ -23,15 +23,17 @@ A [Composer](http://getcomposer.org/) file has been added to this repository.
 
 This package is published to [Packagist](https://packagist.org/), but if you don't want to use it simply add
 
+{
+    "require": {
+        "kissifrot/php-ixr": "dev-master"
+    },
     "repositories": [
         {
             "type": "vcs",
             "url": "https://github.com/boosta-ltd/php-ixr"
         }
-    ],
+    ]
+}
 
-    "require": {
-        "boosta-ltd/php-ixr": "1.8.*"
-    }
 
 To your composer.json file
